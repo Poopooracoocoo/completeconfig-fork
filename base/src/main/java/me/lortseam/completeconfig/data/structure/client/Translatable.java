@@ -7,10 +7,8 @@ import net.minecraft.text.Text;
 
 public interface Translatable {
 
-    @Environment(EnvType.CLIENT)
     TranslationKey getNameTranslation();
 
-    @Environment(EnvType.CLIENT)
     default Text getName() {
         return getNameTranslation().toText();
     }

@@ -14,7 +14,6 @@ import net.minecraft.util.Identifier;
 import java.util.*;
 import java.util.function.Supplier;
 
-@Environment(EnvType.CLIENT)
 public abstract class ConfigScreenBuilder<T> {
 
     private static final Map<String, Supplier<ConfigScreenBuilder<?>>> suppliers = new HashMap<>();

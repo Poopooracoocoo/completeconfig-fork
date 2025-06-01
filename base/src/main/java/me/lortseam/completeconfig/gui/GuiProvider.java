@@ -15,7 +15,6 @@ import java.util.function.Predicate;
  * A GUI provider is used to generate a GUI element for an {@link Entry}. This class stores a predicate, which an entry
  * has to fulfill, and an {@link EntryBuilder}, which performs the actual generation.
  */
-@Environment(EnvType.CLIENT)
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
 public final class GuiProvider<T> {
 

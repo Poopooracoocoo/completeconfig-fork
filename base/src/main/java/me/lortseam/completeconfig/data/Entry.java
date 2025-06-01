@@ -49,9 +49,7 @@ public class Entry<T> implements StructurePart, Identifiable, Translatable, Desc
     private final String id;
     @Getter
     private final T defaultValue;
-    @Environment(EnvType.CLIENT)
     private TranslationKey translation;
-    @Environment(EnvType.CLIENT)
     private TranslationKey descriptionTranslation;
     @Accessors(fluent = true)
     @Getter
@@ -159,7 +157,6 @@ public class Entry<T> implements StructurePart, Identifiable, Translatable, Desc
         return descriptionTranslation.exists() ? Optional.of(descriptionTranslation) : Optional.empty();
     }
 
-    @Environment(EnvType.CLIENT)
     public Function<T, Text> getValueFormatter() {
         return value -> Text.of(value.toString());
     }

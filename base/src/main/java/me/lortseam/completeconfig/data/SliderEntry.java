@@ -13,7 +13,6 @@ import java.util.function.Function;
 public class SliderEntry<T extends Number> extends BoundedEntry<T> {
 
     private final T interval;
-    @Environment(EnvType.CLIENT)
     private TranslationKey valueTranslation;
 
     public SliderEntry(EntryOrigin origin, T min, T max, T interval) {

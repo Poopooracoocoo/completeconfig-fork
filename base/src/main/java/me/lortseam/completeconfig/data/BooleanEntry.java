@@ -15,9 +15,7 @@ import java.util.function.Function;
 
 public class BooleanEntry extends Entry<Boolean> {
 
-    @Environment(EnvType.CLIENT)
     private Map<Boolean, TranslationKey> valueTranslations;
-    @Environment(EnvType.CLIENT)
     @Getter
     private final boolean checkbox;
 
@@ -26,7 +24,6 @@ public class BooleanEntry extends Entry<Boolean> {
         checkbox = origin.isAnnotationPresent(ConfigEntry.Checkbox.class);
     }
 
-    @Environment(EnvType.CLIENT)
     private Map<Boolean, TranslationKey> getValueTranslations() {
         if (valueTranslations == null) {
             valueTranslations = new HashMap<>();

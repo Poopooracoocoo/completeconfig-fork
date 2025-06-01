@@ -21,7 +21,6 @@ public interface ConfigGroup extends ConfigContainer {
      *
      * @return a custom name translation key
      */
-    @Environment(EnvType.CLIENT)
     default String getNameKey() {
         return null;
     }
@@ -32,7 +31,6 @@ public interface ConfigGroup extends ConfigContainer {
      *
      * @return a custom description translation key
      */
-    @Environment(EnvType.CLIENT)
     default String getDescriptionKey() {
         return null;
     }
@@ -51,7 +49,6 @@ public interface ConfigGroup extends ConfigContainer {
      *
      * @return the background identifier
      */
-    @Environment(EnvType.CLIENT)
     default Identifier getBackground() {
         return null;
     }

@@ -35,7 +35,6 @@ public class Config extends Parent implements ConfigContainer {
     private final ConfigOptions options;
     private final HoconConfigurationLoader loader;
     private Runnable resolver;
-    @Environment(EnvType.CLIENT)
     private TranslationKey translation;
 
     /**

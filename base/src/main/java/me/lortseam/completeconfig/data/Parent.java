@@ -128,10 +128,8 @@ public abstract class Parent implements StructurePart, Translatable {
         return entries.isEmpty() && clusters.isEmpty();
     }
 
-    @Environment(EnvType.CLIENT)
     public abstract TranslationKey getBaseTranslation(TranslationBase translationBase, @Nullable Class<? extends ConfigContainer> clazz);
 
-    @Environment(EnvType.CLIENT)
     public final TranslationKey getBaseTranslation() {
         return getBaseTranslation(TranslationBase.INSTANCE, null);
     }

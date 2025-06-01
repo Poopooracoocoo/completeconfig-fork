@@ -13,7 +13,6 @@ public final class TranslationKey {
 
     private final String[] elements;
 
-    @Environment(EnvType.CLIENT)
     private TranslationKey(String... elements) {
         this.elements = elements;
     }

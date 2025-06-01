@@ -21,11 +21,8 @@ public final class Cluster extends Parent implements Identifiable, DescriptionSu
     private final Parent parent;
     private final ConfigGroup group;
     private final String comment;
-    @Environment(EnvType.CLIENT)
     private TranslationKey translation;
-    @Environment(EnvType.CLIENT)
     private TranslationKey descriptionTranslation;
-    @Environment(EnvType.CLIENT)
     private Identifier background;
 
     Cluster(Parent parent, ConfigGroup group) {
@@ -68,7 +65,6 @@ public final class Cluster extends Parent implements Identifiable, DescriptionSu
         return descriptionTranslation.exists() ? Optional.of(descriptionTranslation) : Optional.empty();
     }
 
-    @Environment(EnvType.CLIENT)
     public Optional<Identifier> getBackground() {
         return Optional.ofNullable(background);
     }
